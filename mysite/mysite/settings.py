@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -129,8 +128,4 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
  # Конфигурация сервера электронной почты
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'kochetkovaksenia1@gmail.com'
-EMAIL_HOST_PASSWORD = 'muzm popw pnib lfda'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+
