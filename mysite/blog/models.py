@@ -9,13 +9,13 @@ class PublishedManager(models.Manager):
         return super().get_queryset().filter(status=Post.Status.PUBLISHED)
         
 class Post(models.Model):
-        
-    tags = TaggableManager()
-        
+ 
     class Status(models.TextChoices):
         DRAFT = 'DF', 'Draft'
         PUBLISHED = 'PB', 'Published'
     
+    
+    tags = TaggableManager()
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
@@ -54,3 +54,5 @@ class Comment(models.Model):
                        ]
     def __str__(self):
         return f'Comment by {self.name} on {self.post}'
+    
+    
